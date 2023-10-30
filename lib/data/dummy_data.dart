@@ -3,7 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:meals/models/category.dart';
 import 'package:meals/models/meal.dart';
 
-// Constants in Dart should be written in lowerCamelcase.
+int highestMeal = 10;
+
 const availableCategories = [
   Category(
     id: 'c1',
@@ -57,8 +58,8 @@ const availableCategories = [
   ),
 ];
 
-const dummyMeals = [
-  Meal(
+var dummyMeals = [
+  const Meal(
     id: 'm1',
     categories: [
       'c1',
@@ -92,7 +93,7 @@ const dummyMeals = [
     isVegetarian: true,
     isLactoseFree: true,
   ),
-  Meal(
+  const Meal(
     id: 'm2',
     categories: [
       'c2',
@@ -120,7 +121,7 @@ const dummyMeals = [
     isVegetarian: false,
     isLactoseFree: false,
   ),
-  Meal(
+  const Meal(
     id: 'm3',
     categories: [
       'c2',
@@ -152,7 +153,7 @@ const dummyMeals = [
     isVegetarian: false,
     isLactoseFree: true,
   ),
-  Meal(
+  const Meal(
     id: 'm4',
     categories: [
       'c4',
@@ -187,7 +188,7 @@ const dummyMeals = [
     isVegetarian: false,
     isLactoseFree: false,
   ),
-  Meal(
+  const Meal(
     id: 'm5',
     categories: [
       'c2'
@@ -223,7 +224,7 @@ const dummyMeals = [
     isVegetarian: true,
     isLactoseFree: true,
   ),
-  Meal(
+  const Meal(
     id: 'm6',
     categories: [
       'c6',
@@ -259,7 +260,7 @@ const dummyMeals = [
     isVegetarian: true,
     isLactoseFree: false,
   ),
-  Meal(
+  const Meal(
     id: 'm7',
     categories: [
       'c7',
@@ -290,7 +291,7 @@ const dummyMeals = [
     isVegetarian: true,
     isLactoseFree: false,
   ),
-  Meal(
+  const Meal(
     id: 'm8',
     categories: [
       'c8',
@@ -323,7 +324,22 @@ const dummyMeals = [
     isVegetarian: false,
     isLactoseFree: true,
   ),
-  Meal(
+  const Meal(
+      id: 'm11',
+      categories: ['c1'],
+      title: 'soem',
+      affordability: Affordability.affordable,
+      complexity: Complexity.hard,
+      imageUrl:
+          'https://cdn.pixabay.com/photo/2018/03/31/19/29/schnitzel-3279045_1280.jpg',
+      duration: 33,
+      ingredients: ['something, something, something'],
+      steps: ['do spmething, do something, do something'],
+      isGlutenFree: false,
+      isLactoseFree: false,
+      isVegan: false,
+      isVegetarian: false),
+  const Meal(
     id: 'm9',
     categories: [
       'c9',
@@ -372,7 +388,7 @@ const dummyMeals = [
     isVegetarian: true,
     isLactoseFree: false,
   ),
-  Meal(
+  const Meal(
     id: 'm10',
     categories: [
       'c2',

@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:meals/data/dummy_data.dart';
+import 'package:meals/models/meal.dart';
+import 'package:meals/screens/add_meal.dart';
 
 import 'package:meals/screens/categories.dart';
 import 'package:meals/screens/filters.dart';
@@ -64,6 +67,23 @@ class _TabsScreenState extends ConsumerState<TabsScreen> {
     return Scaffold(
       appBar: AppBar(
         title: Text(activePageTitle),
+        actions: [
+          IconButton(
+              onPressed: () {
+                Navigator.of(context)
+                    .push(MaterialPageRoute(builder: (context) {
+                  return AddMealScreen();
+                }));
+              },
+              icon: const Icon(Icons.add)),
+          IconButton(
+              onPressed: () {
+                for (Meal meal in dummyMeals) {
+                  print(meal.title);
+                }
+              },
+              icon: Icon(Icons.textsms_outlined))
+        ],
       ),
       drawer: MainDrawer(
         onSelectScreen: _setScreen,
